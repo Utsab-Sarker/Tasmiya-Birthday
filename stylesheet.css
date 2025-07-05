@@ -1280,6 +1280,21 @@ audio {
 	display: none;
 	font-weight: bold;
 }
+#admission_button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#admission_button:hover {
+    background-color: #e91e63;
+}
 
 .btn-primary {
         border-color: #466baf;
