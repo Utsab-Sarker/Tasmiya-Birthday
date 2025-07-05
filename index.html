@@ -167,7 +167,10 @@
 					<button class="btn btn-primary" id="light_candle"> Light Candle</button>
 					<button class="btn btn-primary" id="wish_message">Happy Birthday</button>
 					<button class="btn btn-primary" id="story">A mesage for you</button>
-					<!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
+					<button class="btn btn-primary" id="cake_cut">Let's Cut the Cake</button>
+					<button class="btn btn-success" id="open_new_tab" style="display: none;">
+  পরবর্তীতে পৃষ্ঠায় যাও
+					</button>
 				</div>
 			</div>
 			<!-- <div class="col-md-2">
@@ -182,7 +185,6 @@
 			</div> -->
 		</div>
 	</div>
-	<button id="admission_button">পরবর্তী পৃষ্ঠায় যেতে এখানে ক্লিক করো</button>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -197,9 +199,9 @@
   ga('send', 'pageview');
 
 </script>
-	<script>
-document.getElementById("admission_button").addEventListener("click", function() {
-    window.open("https://sites.google.com/view/tasmiya-birthday/tasmiya-birthday-page-5", "_blank");
-});
-	</script>
+<script>
+  document.getElementById('open_new_tab').addEventListener('click', function() {
+    window.open('https://sites.google.com/view/tasmiya-birthday/tasmiya-birthday-page-5', '_blank');
+  });
+</script>
 </html>
