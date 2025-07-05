@@ -31,8 +31,8 @@
 
 <body>
 	<div class="loading"></div>
-	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
+	<audio id="birthday_song" class="song" controls loop autoplay>
+    <source src="hbd.mp3" type="audio/mpeg">
 	   Your browser isn't invited for super fun audio time.
     </audio>
     <div class="balloons text-center" id="b1">
@@ -156,25 +156,26 @@
 
 </script>
 <script>
-  // Story বাটনের ইভেন্ট
-  document.getElementById('story').addEventListener('click', function() {
-    // এখানে তোমার Story সম্পর্কিত কাজ করবে
-    // যেমন: মেসেজ শো, এনিমেশন, ইত্যাদি
+  // অডিও এলিমেন্ট ধরো
+  var audio = document.getElementById('birthday_song');
 
-    // Story কাজ শেষ হলে বাটন দেখাবে
-    document.getElementById('open_new_tab').style.display = 'inline-block';
+  // story বাটনে ক্লিক করলে
+  document.getElementById('story').addEventListener('click', function() {
+    // Story এর কাজগুলো শেষ হওয়ার পরে নিচের বাটন দেখাবে ফেড ইন এনিমেশন সহ
+    var btn = document.getElementById('open_new_tab');
+    btn.style.display = 'inline-block';   // বাটন দেখাও
+    setTimeout(function() {
+      btn.style.opacity = 1;               // ধীরে ধীরে ফেড ইন করাও
+    }, 50);
   });
 
-  // "পরবর্তী পৃষ্ঠায় যাও" বাটন ক্লিক ইভেন্ট
+  // "পরবর্তীতে পৃষ্ঠায় যাও" বাটনে ক্লিক করলে
   document.getElementById('open_new_tab').addEventListener('click', function() {
-    // চাইলে এখানে মিউজিক pause করতে পারো
-    // audio.pause();
+    audio.pause();          // অডিও থামাও
+    audio.currentTime = 0;  // আবার শুরুতে নিয়ে যাও (ঐচ্ছিক)
 
-    // নতুন ট্যাবে লিঙ্ক ওপেন করবে
-    window.open(
-      'https://sites.google.com/view/tasmiya-birthday/tasmiya-birthday-page-5',
-      '_blank'
-    );
+    // নতুন ট্যাবে পেজ খুলো
+    window.open('https://sites.google.com/view/tasmiya-birthday/tasmiya-birthday-page-5', '_blank');
   });
 </script>
 </html>
