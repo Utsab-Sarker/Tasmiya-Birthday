@@ -156,8 +156,25 @@
 
 </script>
 <script>
+  // Story বাটনের ইভেন্ট
+  document.getElementById('story').addEventListener('click', function() {
+    // এখানে তোমার Story সম্পর্কিত কাজ করবে
+    // যেমন: মেসেজ শো, এনিমেশন, ইত্যাদি
+
+    // Story কাজ শেষ হলে বাটন দেখাবে
+    document.getElementById('open_new_tab').style.display = 'inline-block';
+  });
+
+  // "পরবর্তী পৃষ্ঠায় যাও" বাটন ক্লিক ইভেন্ট
   document.getElementById('open_new_tab').addEventListener('click', function() {
-    window.open('https://sites.google.com/view/tasmiya-birthday/tasmiya-birthday-page-5', '_blank');
+    // চাইলে এখানে মিউজিক pause করতে পারো
+    // audio.pause();
+
+    // নতুন ট্যাবে লিঙ্ক ওপেন করবে
+    window.open(
+      'https://sites.google.com/view/tasmiya-birthday/tasmiya-birthday-page-5',
+      '_blank'
+    );
   });
 </script>
 </html>
