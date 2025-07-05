@@ -168,7 +168,7 @@ $('document').ready(function(){
         $('#story').fadeIn('slow');
     });
 });
-	});
+
 	
 	$('#story').click(function(){
 		$(this).fadeOut('slow');
