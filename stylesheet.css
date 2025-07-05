@@ -1080,15 +1080,15 @@ audio {
 	bottom: -200px;
 	opacity: 0.6;
 	z-index: 99;
-	width: 60px;
-	height: 110px;
+	width: 50px;
+	height: 100px;
 	background-repeat: no-repeat no-repeat;
-	background-size: 100px 183px;
+	background-size: 50px 100px;
 }
 .balloons h2 {
 	text-transform: uppercase;
 	font-family: 'Signika', sans-serif;
-	font-size: 50px;
+	font-size: 24px;
 	color: #BF4136;
 	text-shadow: 5px 5px 5px #FFF;
 	display: none;
@@ -1309,16 +1309,3 @@ audio {
     	}
     }*/
 
-/* Responsive fix for balloons on mobile to prevent cutoff */
-@media only screen and (max-width: 600px) {
-    #b1, #b2, #b3, #b4, #b5, #b6 {
-        left: 10% !important;
-        right: auto !important;
-        transform: none !important;
-    }
-    #b2 { left: 25% !important; }
-    #b3 { left: 40% !important; }
-    #b4 { left: 55% !important; }
-    #b5 { left: 70% !important; }
-    #b6 { left: 85% !important; }
-}
